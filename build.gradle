@@ -54,7 +54,9 @@ archivesBaseName = mod_artifact_basename
 minecraft {
     version = minecraft_version + "-" + forge_version
     runDir = "run"
-    
+
+    useDepAts = true
+
     // the mappings can be changed at any time, and must be in the following format.
     // snapshot_YYYYMMDD   snapshot are built nightly.
     // stable_#            stables are built at the discretion of the MCP team.
@@ -81,6 +83,7 @@ dependencies {
     // except that these dependencies get remapped to your current MCP mappings
     //deobfCompile 'com.mod-buildcraft:buildcraft:6.0.8:dev'
     //deobfProvided 'com.mod-buildcraft:buildcraft:6.0.8:dev'
+    deobfCompile 'mezz.jei:jei_1.9:3.1.0.170'
 
     // for more info...
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
